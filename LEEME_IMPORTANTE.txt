@@ -1,0 +1,76 @@
+========================================================================
+PROYECTO DE GESTIÓN DE IGLESIA (GRUPO 7) - PROGRAMACIÓN INTERMEDIA
+========================================================================
+
+AUTORES:
+Erinson Josué Alvarez Garcia 20211023800
+Cristina Lisbeth Cruz Aguilera 20231031044
+Kevin Alejandro Laínez Salinas 20231031586
+Jonatan Isai Varela Giron        20231000159
+Dany Josue Noguera Tinoco   20212020372
+
+
+DESCRIPCIÓN TÉCNICA:
+Sistema de información completo desarrollado en Java (JDK 21/24) bajo el paradigma
+de Programación Orientada a Objetos. Implementa patrón arquitectónico MVC,
+persistencia de datos con SQLite y seguridad basada en roles (RBAC).
+
+REQUISITOS DEL SISTEMA:
+1. Java Development Kit (JDK) 17 o superior.
+2. IntelliJ IDEA (Entorno recomendado).
+
+------------------------------------------------------------------------
+INSTRUCCIONES DE INSTALACIÓN (PASO A PASO)
+------------------------------------------------------------------------
+
+PASO 1: ABRIR EL PROYECTO
+   - Descomprima la carpeta "Grupo_7_Proyecto_1".
+   - Abra IntelliJ IDEA -> Open -> Seleccione la carpeta descomprimida.
+
+PASO 2: CONFIGURACIÓN DE LIBRERÍAS
+   Este proyecto incluye las librerías necesarias en la carpeta "/lib".
+   Si al abrir el proyecto ve errores en rojo en los "import", haga esto:
+
+   1. Vaya al menú: File > Project Structure > Libraries.
+   2. Haga clic en el botón (+) > Java.
+   3. Navegue dentro de la carpeta del proyecto a la carpeta "lib".
+   4. Seleccione los dos archivos .jar que encontrará ahí:
+      - flatlaf-3.4.jar (Para el diseño visual moderno)
+      - sqlite-jdbc-3.45.1.0.jar (Para la base de datos)
+   5. Haga clic en OK y luego en Apply.
+
+PASO 3: EJECUCIÓN
+   1. Navegue a: src/Proyecto_iglesia/app/Main.java
+   2. Haga clic derecho en el archivo Main -> Run 'Main.main()'.
+
+------------------------------------------------------------------------
+CREDENCIALES DE ACCESO (ROLES DE PRUEBA)
+------------------------------------------------------------------------
+El sistema lee los usuarios desde el archivo "usuarios.txt" ubicado en la raíz.
+Puede usar cualquiera de estos perfiles para probar los diferentes niveles de acceso:
+
+1. ROL: PASTOR (LIDER_IGLESIA) - ACCESO TOTAL
+   - Usuario: admin
+   - Clave:   admin123
+   (Permite: Crear Grupos, Ver Reportes, Editar Datos de Iglesia, Gestionar todo)
+
+2. ROL: LÍDER DE GRUPO (LIDER_GRUPO) - ACCESO OPERATIVO
+   - Usuario: carlos
+   - Clave:   carlos123
+   (Permite: Gestionar Reuniones y Tomar Asistencia)
+
+3. ROL: MIEMBRO - ACCESO BÁSICO
+   - Usuario: ana
+   - Clave:   ana123
+   (Permite: Solo ver su información personal en modo lectura)
+
+------------------------------------------------------------------------
+NOTAS TÉCNICAS IMPORTANTES
+------------------------------------------------------------------------
+* Base de Datos: El archivo "iglesia.sqlite" ya contiene datos precargados
+  (Data Seeding) para pruebas inmediatas. No lo borre.
+* Idiomas: El sistema soporta Español e Inglés mediante archivos .properties
+  ubicados en la carpeta "resources".
+* Diseño: Se utiliza la librería FlatLaf para el modo oscuro/moderno. Si esta
+  librería falta, el sistema degradará automáticamente al diseño estándar de Java
+  sin generar errores críticos.

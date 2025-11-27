@@ -1,0 +1,3 @@
+admin,admin123,LIDER_IGLESIA
+carlos,carlos123,LIDER_GRUPO
+ana,ana123,MIEMBRO

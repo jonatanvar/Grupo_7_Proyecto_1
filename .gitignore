@@ -1,0 +1,15 @@
+# Ignorar archivos compilados (la carpeta naranja 'out')
+/out/
+
+# Ignorar configuraciones de usuario de IntelliJ (opcional pero recomendado)
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/tasks.xml
+.idea/shelf/
+
+# Archivos de sistema operativo (basura)
+.DS_Store
+Thumbs.db
+
+# NOTA: NO ignoramos la carpeta /lib/ ni los archivos .sqlite ni .txt
+# porque son necesarios para que el profesor ejecute el proyecto.
